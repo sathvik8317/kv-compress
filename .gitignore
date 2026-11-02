@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+.env
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+# downloaded benchmark data (fetch with scripts/download_longbench.sh)
+data/

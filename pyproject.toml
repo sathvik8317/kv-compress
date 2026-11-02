@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kv-compress"
+version = "0.1.0"
+description = "KV-cache compression on long context: H2O, SnapKV, StreamingLLM and INT8/INT4/INT2 (KIVI) quantization, measured on needle-in-a-haystack and LongBench."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["torch>=2.4", "transformers>=4.45", "safetensors", "huggingface_hub", "matplotlib"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["kvcompress"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
